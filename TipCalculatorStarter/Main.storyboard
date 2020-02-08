@@ -89,9 +89,6 @@
                                                             <segment title="20%"/>
                                                         </segments>
                                                         <color key="tintColor" name="tcHotPink"/>
-                                                        <connections>
-                                                            <action selector="tipPercentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VLW-o6-jmK"/>
-                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
@@ -219,7 +216,7 @@
                         <outlet property="themeSwitch" destination="BnY-K6-0YD" id="xGp-fW-sIX"/>
                         <outlet property="tipAmountLabel" destination="n6y-GO-nFl" id="cbk-XO-MfQ"/>
                         <outlet property="tipAmountTitleLabel" destination="Uju-Os-Ii8" id="u0J-jD-GfU"/>
-                        <outlet property="tipPercentSegmentedControl" destination="BeN-DN-Xtx" id="uGf-6o-iov"/>
+                        <outlet property="tipPercentSegmentedControl" destination="Jq6-8o-HBh" id="H7B-WR-pfE"/>
                         <outlet property="titleLabel" destination="Npo-gd-VJ1" id="ZBy-vw-kom"/>
                         <outlet property="totalAmountLabel" destination="N3Q-nc-Lio" id="A0i-nb-UQz"/>
                         <outlet property="totalAmountTitleLabel" destination="7Uc-zu-u4z" id="iZd-9X-hSN"/>

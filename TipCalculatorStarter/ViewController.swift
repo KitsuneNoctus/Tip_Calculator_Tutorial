@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var inputCardView: UIView!
     @IBOutlet weak var billAmountTextField: BillAmountTextField!
-    @IBOutlet weak var tipPercentSegmentedControl: UIStackView!
+    @IBOutlet weak var tipPercentSegmentedControl: UISegmentedControl!
+    
     
     @IBOutlet weak var outputCardView: UIView!
     @IBOutlet weak var tipAmountTitleLabel: UILabel!
@@ -31,15 +32,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        billAmountTextField.calculateButtonAction = {
-            // 1
-            guard let billAmountText = self.billAmountTextField.text,
-                let billAmount = Double(billAmountText) else {
-                    return
-            }
-
-            print("Bill Amount: \(billAmount)")
-        }
+//        billAmountTextField.calculateButtonAction = {
+//            guard let billAmountText = self.billAmountTextField.text
+//                else { return }
+//
+//            print("Bill Amount: \(billAmountText)")
+//        }
     }
 
     
@@ -50,8 +48,11 @@ class ViewController: UIViewController {
             print("switch toggled off")
         }
     }
-    @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
-    }
+    
+//    @IBAction func tipPercentChanged(_ sender: UISegmentedControl) {
+//    }
+    
+    
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         print("reset button tapped")
