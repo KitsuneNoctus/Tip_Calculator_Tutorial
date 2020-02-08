@@ -32,13 +32,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        billAmountTextField.calculateButtonAction = {
-//            guard let billAmountText = self.billAmountTextField.text
-//                else { return }
-//
-//            print("Bill Amount: \(billAmountText)")
-//        }
+        billAmountTextField.calculateButtonAction = {
+            guard let billAmountText = self.billAmountTextField.text
+                else { return }
+
+            print("Bill Amount: \(billAmountText)")
+        }
     }
+
+
 
     
     @IBAction func themeToggled(_ sender: UISwitch) {
