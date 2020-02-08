@@ -32,10 +32,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         billAmountTextField.calculateButtonAction = {
-            print("Work please.")
-            
+            // 1
+            guard let billAmountText = self.billAmountTextField.text,
+                let billAmount = Double(billAmountText) else {
+                    return
+            }
+
+            print("Bill Amount: \(billAmount)")
         }
     }
+
     
     @IBAction func themeToggled(_ sender: UISwitch) {
         if sender.isOn{
