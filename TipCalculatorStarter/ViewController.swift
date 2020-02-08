@@ -31,12 +31,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         billAmountTextField.calculateButtonAction = {
-            guard let billAmountText = self.billAmountTextField.text
-                else { return }
+            // 1
+            guard let billAmountText = self.billAmountTextField.text,
+                let billAmount = Double(billAmountText) else {
+                    return
+            }
 
-            print("Bill Amount: \(billAmountText)")
+            print("Bill Amount: \(billAmount)")
         }
     }
 
