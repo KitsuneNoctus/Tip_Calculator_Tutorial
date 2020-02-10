@@ -20,9 +20,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uae-ci-apE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npo-gd-VJ1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npo-gd-VJ1">
                                         <rect key="frame" x="24" y="0.0" width="157" height="85"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" name="tcCharcoal"/>
                                         <nil key="highlightedColor"/>
@@ -37,10 +36,13 @@
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Npo-gd-VJ1" secondAttribute="bottom" id="RUU-91-d8c"/>
+                                    <constraint firstItem="Npo-gd-VJ1" firstAttribute="leading" secondItem="uae-ci-apE" secondAttribute="leading" constant="24" id="eme-vM-YyI"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmh-X5-vDG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmh-X5-vDG">
                                 <rect key="frame" x="15" y="109" width="345" height="213"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="FKX-R9-ZcF">
                                         <rect key="frame" x="22" y="56.5" width="285" height="100"/>
@@ -87,9 +89,8 @@
                                 </subviews>
                                 <color key="backgroundColor" name="tcDarkBlue"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zTf-5K-Ai4">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTf-5K-Ai4">
                                 <rect key="frame" x="15" y="346" width="345" height="213"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="9Kl-i3-MqB">
                                         <rect key="frame" x="22" y="65" width="164" height="83"/>
@@ -133,10 +134,12 @@
                                 </subviews>
                                 <color key="backgroundColor" name="tcWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-j7-2py">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-j7-2py">
                                 <rect key="frame" x="15" y="583" width="345" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="tcDarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rh7-hI-PDg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" name="tcWhite"/>
@@ -148,9 +151,21 @@
                         </subviews>
                         <color key="backgroundColor" name="tcOffWhite"/>
                         <constraints>
+                            <constraint firstItem="zTf-5K-Ai4" firstAttribute="height" secondItem="lmh-X5-vDG" secondAttribute="height" id="3y1-4y-fwA"/>
+                            <constraint firstItem="lmh-X5-vDG" firstAttribute="top" secondItem="uae-ci-apE" secondAttribute="bottom" constant="24" id="4Ct-tY-iAS"/>
+                            <constraint firstItem="zTf-5K-Ai4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="4Lu-Dc-M3R"/>
                             <constraint firstItem="uae-ci-apE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Vg-Wi-j9N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Npo-gd-VJ1" secondAttribute="top" id="6WB-wS-Nyx"/>
                             <constraint firstItem="uae-ci-apE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DE8-Rr-0TG"/>
+                            <constraint firstItem="YbV-j7-2py" firstAttribute="top" secondItem="zTf-5K-Ai4" secondAttribute="bottom" constant="24" id="HwC-yo-1Jb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YbV-j7-2py" secondAttribute="trailing" constant="15" id="Jo4-YJ-mQA"/>
+                            <constraint firstItem="zTf-5K-Ai4" firstAttribute="top" secondItem="lmh-X5-vDG" secondAttribute="bottom" constant="24" id="Pkn-h5-dMG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YbV-j7-2py" secondAttribute="bottom" constant="24" id="XaY-Fe-QEh"/>
+                            <constraint firstItem="YbV-j7-2py" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="YUG-AX-M9q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="uae-ci-apE" secondAttribute="bottom" constant="-85" id="aLb-0y-Ija"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zTf-5K-Ai4" secondAttribute="trailing" constant="15" id="q4q-My-gNj"/>
+                            <constraint firstItem="lmh-X5-vDG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="sHn-R4-Mkq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lmh-X5-vDG" secondAttribute="trailing" constant="15" id="sO1-hv-1BJ"/>
                             <constraint firstItem="uae-ci-apE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xUe-y5-Qcj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
