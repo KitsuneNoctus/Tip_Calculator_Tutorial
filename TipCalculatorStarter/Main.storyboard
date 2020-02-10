@@ -26,9 +26,8 @@
                                         <color key="textColor" name="tcCharcoal"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-K6-0YD">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-K6-0YD">
                                         <rect key="frame" x="302" y="27" width="51" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="onTintColor" name="tcSeafoamGreen"/>
                                         <connections>
                                             <action selector="themeToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="CdQ-Ml-eaH"/>
@@ -38,7 +37,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Npo-gd-VJ1" secondAttribute="bottom" id="RUU-91-d8c"/>
+                                    <constraint firstAttribute="trailing" secondItem="BnY-K6-0YD" secondAttribute="trailing" constant="24" id="Uz6-kA-DeD"/>
+                                    <constraint firstItem="BnY-K6-0YD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Npo-gd-VJ1" secondAttribute="trailing" constant="20" id="bEI-Aj-FVF"/>
                                     <constraint firstItem="Npo-gd-VJ1" firstAttribute="leading" secondItem="uae-ci-apE" secondAttribute="leading" constant="24" id="eme-vM-YyI"/>
+                                    <constraint firstItem="BnY-K6-0YD" firstAttribute="centerY" secondItem="Npo-gd-VJ1" secondAttribute="centerY" id="er4-SO-YGk"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmh-X5-vDG">
