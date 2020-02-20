@@ -31,17 +31,36 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         billAmountTextField.calculateButtonAction = {
-               // 1
-               guard let billAmountText = self.billAmountTextField.text,
-                   let billAmount = Double(billAmountText) else {
-                       return
-               }
 
-               print("Bill Amount: \(billAmount)")
-           }
+        billAmountTextField.calculateButtonAction = {
+            // dismiss keyboard if it's displayed
+            if self.billAmountTextField.isFirstResponder {
+                self.billAmountTextField.resignFirstResponder()
+            }
+            
+            // 1
+            guard let billAmountText = self.billAmountTextField.text,
+                let billAmount = Double(billAmountText) else {
+                    return
+            }
+
+            let roundedBillAmount = (100 * billAmount).rounded() / 100
+
+            // 2
+            let tipPercent = 0.15
+            let tipAmount = roundedBillAmount * tipPercent
+            let roundedTipAmount = (100 * tipAmount).rounded() / 100
+
+            // 3
+            let totalAmount = roundedBillAmount + roundedTipAmount
+
+            // Update UI
+            self.billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
+            self.tipAmountLabel.text = String(format: "%.2f", roundedTipAmount)
+            self.totalAmountLabel.text = String(format: "%.2f", totalAmount)
+        }
     }
+
 
 
 
