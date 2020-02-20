@@ -89,6 +89,9 @@
                                                             <segment title="20%"/>
                                                         </segments>
                                                         <color key="tintColor" name="tcHotPink"/>
+                                                        <connections>
+                                                            <action selector="tipPercentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="swJ-wW-ipT"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
